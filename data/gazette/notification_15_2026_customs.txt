@@ -1,0 +1,110 @@
+GAZETTE NOTIFICATION — OFFICIAL TEXT
+Source: TaxGuru (taxguru.in), reproducing Ministry of Finance Gazette
+URL: https://taxguru.in/custom-duty/customs-duty-gold-silver-increased-10-percent.html
+Retrieved: 2026-06-12
+
+================================================================================
+MINISTRY OF FINANCE
+(Department of Revenue)
+
+Notification No. 15/2026-Customs | Dated: 12th May, 2026
+G.S.R. 358(E)
+================================================================================
+
+In exercise of the powers conferred by sub-section (1) of section 25 of the
+Customs Act, 1962 (52 of 1962) and sub-section (12) of section 3 of the
+Customs Tariff Act, 1975 (51 of 1975), the Central Government, on being
+satisfied that it is necessary in the public interest so to do, hereby makes
+the following further amendments in the notification of the Government of
+India, Ministry of Finance (Department of Revenue), No. 45/2025-Customs,
+dated the 24th October, 2025, published in the Gazette of India,
+Extraordinary, Part II, Section 3, Sub-section (i), vide number G.S.R.
+781(E), dated the 24th October, 2025, namely: —
+
+In the said notification, in TABLE I, –
+
+(1) against S. No. 192, in column (4), for the entry "5%", the entry
+    "10%" shall be substituted;
+
+(2) against S. No. 193, in column (4), for the entry "5%", the entry
+    "10%" shall be substituted;
+
+(3) against S. No. 194, in column (4), for the entry "5%", at both the
+    places, the entry "10%" shall be substituted;
+
+(4) against S. No. 195, in column (4), for the entry "5%", the entry
+    "10%" shall be substituted;
+
+(5) against S. No. 196, in column (4), for the entry "5%", the entry
+    "10%" shall be substituted;
+
+(6) against S. No. 197, in column (4), for the entry "5%", the entry
+    "10%" shall be substituted;
+
+(7) after S. No. 200 and the entries relating thereto, the following
+    S. No. and entries shall be inserted, namely:-
+
+    S.No. | Heading | Description                          | Rate | - | Condition
+    200A  | 7112    | Spent catalyst or ash containing     | 10%  | – | 3 and 24
+                      precious metals
+                      Provided that nothing contained in
+                      this S. No. shall have effect after
+                      the 31st March, 2027
+
+(8) for S. No. 202 and the entries relating thereto, the following S. No.
+    and entries shall be substituted, namely:-
+
+    S.No. | Heading                                 | Description           | Rate
+    202   | 7107 00 00, 7109 00 00, 7110 11 11,     | All goods other than  | 10%
+            7110 11 19, 7110 11 21, 7110 11 29,       those mentioned at
+            7110 19 10, 7110 19 90, 7110 21 00,       S. No. 200A
+            7110 29 00, 7110 41 00, 7110 49 00,
+            7111 00 00, 7112, 7118
+
+(9) against S. No. 203, in column (4), for the entry "5%", the entry
+    "10%" shall be substituted;
+
+2. This notification shall come into force on the 13th day of May, 2026.
+
+[F. No. 354/04/2026-TRU]
+DHEERAJ SHARMA, Under Secy.
+
+Note: The principal notification No. 45/2025-Customs, dated the 24th October,
+2025, was published in the Gazette of India, Extraordinary, Part II, Section 3,
+Sub-Section (i) vide number G.S.R. 781(E), dated the 24th October, 2025 and was
+last amended vide notification No. 06/2026-Customs, dated the 12th March, 2026,
+published in the Gazette of India, Extraordinary, Part II, Section 3, Sub-Section
+(i), vide number G.S.R.181 (E), dated the 12th March, 2026.
+
+================================================================================
+RELEVANT TABLE I ENTRIES (for reference)
+================================================================================
+
+S. No. 192: Gold dore bar, having gold content not exceeding 95%
+S. No. 193: Silver dore bar having silver content not exceeding 95%
+S. No. 194: (i) Gold bars, other than tola bars, bearing manufacturer's or
+             refiner's engraved serial number and weight expressed in metric
+             units, and gold coins having gold content not below 99.5%,
+             imported by the eligible passenger
+             (ii) Gold in any form other than (i), including tola bars and
+             ornaments, but excluding ornaments studded with stones or pearls
+S. No. 195: Silver, in any form including ornaments, but excluding ornaments
+             studded with stones or pearls, imported by the eligible passenger
+S. No. 196: All goods other than those mentioned at S. No. 192
+S. No. 197: All goods other than those mentioned at S. No. 193
+S. No. 203: (i) Gold findings; (ii) Silver findings; (iii) Platinum findings
+             Explanation – For the purposes of this entry, gold, silver or
+             platinum findings mean a small component such as hook, clasp,
+             clamp, pin, catch, screw back used to hold the whole or a part
+             of a piece of jewelry in place.
+
+================================================================================
+RESEARCH NOTES (gold-policy-project)
+================================================================================
+
+Key effect: BCD on gold/silver bullion raised from 5% → 10%, effective 13 May 2026.
+This notification amends principal notification No. 45/2025-Customs.
+Combined with Notification 16/2026 (AIDC raised to 5%), total duty = BCD 10% +
+AIDC 5% + SWS 0% = 15% → DUTY_MULT = 1.15.
+
+Prior regime (Jul 24, 2024 – May 12, 2026): BCD 5% + AIDC 1% = 6% → DUTY_MULT = 1.06

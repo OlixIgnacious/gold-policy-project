@@ -1,0 +1,75 @@
+GAZETTE NOTIFICATION — OFFICIAL TEXT
+Source: TaxGuru (taxguru.in), reproducing Ministry of Finance Gazette
+URL: https://taxguru.in/custom-duty/concessional-customs-duty-gold-silver-platinum-imports-raised-10-percent.html
+Retrieved: 2026-06-12
+
+================================================================================
+MINISTRY OF FINANCE
+(Department of Revenue)
+
+Notification No. 17/2026-Customs | Dated: 12th May, 2026
+G.S.R. 356(E)
+================================================================================
+
+Seeks to amend notification No. 57/2000-Customs dated 8th May 2000, which
+provides concessional rate for gold, silver and platinum imported under
+specified schemes.
+
+In exercise of the powers conferred by sub-section (1) of section 25 of the
+Customs Act, 1962 (52 of 1962), the Central Government, on being satisfied
+that it is necessary in the public interest so to do, hereby makes the
+following further amendments in the notification of the Government of India,
+Ministry of Finance (Department of Revenue) No. 57/2000-Customs, dated the
+8th May, 2000, published in the Gazette of India, Extraordinary, Part II,
+Section 3, Sub-Section (i), vide number G.S.R. 413 (E), dated the 8th May,
+2000, namely:-
+
+In the said notification, in the TABLE, against Sl. No. 1, in column (4),
+for the entry "4.35%" wherever it occurs, "10%" shall be substituted.
+
+2. This notification shall come into force on the 13th day of May, 2026.
+
+[F. No. 354/04/2026-TRU]
+DHEERAJ SHARMA, Under Secy.
+
+Note: The principal notification No. 57/2000-Customs, dated the 8th May, 2000
+was published in the Gazette of India, Extraordinary, Part II, Section 3,
+Sub-Section (i), vide number G.S.R. 413 (E), dated the 8th May, 2000 and was
+last amended by notification No. 33/2024-Customs, dated 23rd July, 2024,
+published in the Gazette of India, Extraordinary, Part II, Section 3,
+Sub-Section (i), vide number G.S.R. 436 (E), dated the 23rd July, 2024.
+
+================================================================================
+BACKGROUND ON NOTIFICATION 57/2000-CUSTOMS
+================================================================================
+
+Notification No. 57/2000-Customs (dated 8 May 2000) grants concessional
+customs duty rates on gold, silver, and platinum imported under specified
+import schemes through:
+  - Nominated agencies (e.g. MMTC, SBI, designated banks)
+  - Qualified importers under export-oriented or trade-linked schemes
+  - Star Export Houses and others with DGFT approval
+
+The concessional rate was:
+  - Pre-Budget 2024: 4% (then revised to various rates)
+  - Post-Jul 23, 2024 (Notification 33/2024): 4.35%
+  - Post-May 13, 2026 (THIS NOTIFICATION): 10%
+
+This is separate from the main BCD notification (45/2025). The concessional
+import route is used by nominated banks/agencies importing for domestic supply.
+
+================================================================================
+RESEARCH NOTES (gold-policy-project)
+================================================================================
+
+Key effect: Concessional duty for banks/nominated agencies importing gold
+under Notification 57/2000 raised from 4.35% → 10%.
+
+Last amended by Notification 33/2024-Customs, dated 23 July 2024 — this was
+the Budget 2024 duty cut that reduced BCD from 10% to 5% (and concessional
+rate from some higher level to 4.35%). This confirms the July 2024 cut date
+as 2024-07-23 (DUTY_CUT_DATE in the analysis).
+
+For the ITS analysis: the concessional route is the primary import channel for
+bullion banks (e.g. HDFC, Axis, ICICI, SBI). So the effective BCD for standard
+imports was 5% (Jul 2024-May 2026) and is now 10%, matching our DUTY_MULT.

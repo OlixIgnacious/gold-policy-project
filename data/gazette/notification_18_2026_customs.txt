@@ -1,0 +1,79 @@
+GAZETTE NOTIFICATION — OFFICIAL TEXT
+Source: TaxGuru (taxguru.in), reproducing Ministry of Finance Gazette
+URL: https://taxguru.in/custom-duty/government-revises-preferential-customs-rates-india-uae-cepa.html
+Retrieved: 2026-06-12
+
+================================================================================
+MINISTRY OF FINANCE
+(Department of Revenue)
+
+Notification No. 18/2026-Customs | Dated: 12th May, 2026
+G.S.R. 357(E)
+================================================================================
+
+Seeks to amend notification No. 22/2022-Customs, dated the 30th April, 2022
+to revise rates under India-UAE CEPA.
+
+In exercise of the powers conferred by sub-section (1) of section 25 of the
+Customs Act, 1962 (52 of 1962), the Central Government, on being satisfied
+that it is necessary in the public interest so to do, hereby makes the
+following amendments in the notification of the Government of India, Ministry
+of Finance (Department of Revenue), No. 22/2022-Customs, dated the 30th April,
+2022, published in the Gazette of India, Extraordinary, Part II, Section 3,
+Sub-section (i), vide number G.S.R. 328(E), dated the 30th April, 2022,
+namely:-
+
+In the said notification, in the TABLE III, against S. No. 12, –
+
+I.  in column (5), for the entry, the entry "10" shall be substituted;
+
+II. in column (6), for the entry, the entry "4" shall be substituted.
+
+This notification shall come into force on the 13th day of May, 2026.
+
+[F. No. 354/04/2026-TRU]
+DHEERAJ SHARMA, Under Secy.
+
+Note: The principal notification No. 22/2022-Customs, dated the 30th April,
+2022, published in the Gazette of India, Extraordinary, Part II, Section 3,
+Sub-section (i), vide number G.S.R. 328(E), dated the 30th April, 2022, and
+was last amended by notification No. 14/2026-Customs, dated 30th April, 2026,
+published in the Gazette of India, Extraordinary, Part II, Section 3,
+Sub-Section (i), vide number G.S.R. 330(E), dated the 30th April, 2026.
+
+================================================================================
+BACKGROUND ON INDIA-UAE CEPA (Notification 22/2022)
+================================================================================
+
+India-UAE Comprehensive Economic Partnership Agreement (CEPA) was signed and
+the first tranche of tariff concessions was notified on 30 April 2022.
+
+Under the CEPA, UAE-origin gold (heading 7108) has been a source of
+controversy: UAE became a re-export route for gold, sometimes avoiding
+full Indian import duty. Conditions under Table III, S. No. 12 govern:
+  - Column (5): Tariff rate quota (TRQ) quantity (in MT)
+  - Column (6): Preferential duty rate (in %)
+
+The substitution of "10" in col (5) and "4" in col (6) tightens the CEPA
+concessional structure, aligning UAE-origin gold imports with the broader
+duty hike to 15% (while retaining a modest TRQ preference).
+
+This is a secondary channel compared to direct bullion imports.
+
+================================================================================
+RESEARCH NOTES (gold-policy-project)
+================================================================================
+
+Key effect: Revises India-UAE CEPA preferential tariff parameters for gold
+(S. No. 12, Table III). This limits the UAE re-export arbitrage route for
+gold that had emerged as a loophole under the earlier (6%) duty regime.
+
+For the ITS regression: This channel is secondary. The main import channels
+are direct (Notification 15/2026 + 16/2026) and nominated agency (17/2026).
+Notification 18/2026 closes the CEPA loophole simultaneously, preventing
+differential pass-through from UAE-routed gold.
+
+Implication for research: The simultaneous tightening of all four channels
+(direct BCD, AIDC, concessional, CEPA) means the policy shock on May 13
+was comprehensive — no pre-existing loophole remained open to blunt the
+pass-through. This supports the clean ITS identification strategy.
