@@ -1,0 +1,107 @@
+SOURCE: World Gold Council
+TITLE: India gold market update: Import tightening
+AUTHOR: Kavita Chacko, Research Head India, World Gold Council
+DATE: 22 May 2026
+URL: https://www.gold.org/goldhub/gold-focus/2026/05/india-gold-market-update-import-tightening
+RETRIEVED: June 2026
+
+NOTE: Full PDF (1.41 MB) available at https://www.gold.org/download/file/20868/India_gold_market_update_Import_tightening.pdf
+      (requires World Gold Council login)
+
+---
+
+HIGHLIGHTS (verbatim from article):
+- Gold import duty was raised sharply by 9% — from 6% to 15%, the steepest increase on record — alongside broader regulatory tightening
+- Domestic gold prices have not yet fully reflected the duty hike amid weak demand and ample supply; local markets are currently in deep discount from the landed price
+- Past trends indicate that higher duty increases unofficial inflows, although official imports remain relatively resilient
+- Gold demand is expected to moderate in 2026, with jewellery and bar and coin demand projected to decline by 50–60t (~10% y/y) on account of the import duty hike
+
+---
+
+KEY DATA POINTS CITED IN ARTICLE:
+
+1. PRE-HIKE DISCOUNT (week prior to May 13):
+   "discount widened from an average of US$14/oz the week prior to the duty hike"
+   → Our dataset validation: May 12 discount = ₹433/10g = 14.1 USD/oz ✓ EXACT MATCH
+
+2. POST-HIKE PRICE RISE:
+   "Physical market prices, proxied by the MCX spot gold price, have risen in the range of 4% to 6% since the change in duty"
+   → Our dataset: May 12 IBJA 151,632 → May 13 IBJA 160,977 = +6.2% ✓
+
+3. POST-HIKE DISCOUNT TO LANDED PRICE (as of May 18):
+   "widening from an average of US$14/oz the week prior to the duty hike to nearly US$150/oz"
+   → Our dataset: May 13 discount to 15% parity ≈ 164 USD/oz (vs NCDEX/LBMA used by WGC — small diff expected)
+
+4. APRIL 2026 IMPORTS:
+   "April imports rose to US$5.6bn, up more than 80% on an annual as well as a sequential basis"
+   → Estimated volume: 48–55 tonnes (front-loading ahead of duty hike)
+
+5. DEMAND FORECAST 2026:
+   "combined jewellery and bar and coin demand could decline by around 50–60t, around 10% lower than the previous year"
+
+6. GOLD ETF FLOWS (April 2026):
+   Net inflows: INR 30.4bn (US$325mn) — 12th consecutive month of positive flows
+   Holdings: 116.7t | AUM: INR 1,781bn (US$19bn)
+   Folios: 12.5 million accounts
+
+7. SMUGGLING CORRELATION:
+   "correlation between import duty and unofficial imports is positive at 0.52"
+   After 2013 hike: unofficial imports rose from ~10t (Q1 2013) to 70t (Q1 2014)
+   After July 2024 duty cut to 6%: unofficial imports fell to near zero
+
+8. HISTORICAL IMPORT RESILIENCE:
+   "official imports remained relatively resilient, between 175t and 236t per quarter in most periods"
+   Correlation between duty rates and official imports: −0.17 (weak, negative)
+
+9. SHARE PRICE IMPACT:
+   "Share prices of listed jewellers fell by ~2%–17% following the duty hike"
+
+10. UAE CEPA / ADVANCE AUTHORISATION:
+    "Rules were also tightened for gold imports linked to exports (under the advance authorisation scheme)"
+    Cap set at 100 kg (Tribune India, 20 May 2026)
+
+11. PM APPEAL TO CONSUMERS:
+    "the Prime Minister has directly appealed to consumers, urging them to avoid buying gold for a year"
+    (India Today, 11 May 2026)
+
+12. BANKS PAUSE:
+    "banks pausing bullion imports for over a month" pending IGST exemption notification
+    (MoneyControl, 12 May 2026)
+
+---
+
+POLICY BACKGROUND FROM ARTICLE:
+
+Chart 1 confirms duty cycle:
+- ~10% duty: 2013–2019
+- 12.5%: 2019–2020
+- (COVID period)
+- Various: 2021–2022
+- 15%: mid-2022
+- 6%: July 2024 (cut)
+- 15%: May 13, 2026 (hike — "fully reversing the duty cut of July 2024")
+
+Table 2: Post-duty hike movement in domestic gold price discounts
+(2019, 2022, 2026 episodes — 2026 "significantly more pronounced due to scale of increase")
+
+---
+
+FOOTNOTES (verbatim):
+[1] Landed price is the international price (LBMA Gold Price AA) adjusted for import taxes. Prices as of 18 May 2026.
+[8] Landed price is the international price (LBMA Gold Price AM) adjusted for import taxes.
+[9] Official domestic price is the landed prices which is the international price adjusted for import taxes.
+[10] Q3 2013 to Q1 2026.
+
+---
+
+ADDITIONAL REFERENCES CITED IN ARTICLE:
+- Centre further tightens gold import rules, caps advance authorization at 100 kg, The Tribune, 20 May 2026
+  https://www.tribuneindia.com/news/business/centre-further-tightens-gold-import-rules-caps-advance-authorisation-at-100-kg/
+- Why PM Modi asked Indian families not to buy gold for a year, India Today, 11 May 2026
+  https://www.indiatoday.in/business/story/pm-modi-gold-warning-not-buy-urged-families-to-avoid-gold-wedding-amid-oil-crisis-2909711-2026-05-11
+- After delay, DGFT authorises 17 banks to import bullion for 3 years, Indian Express, 17 April 2026
+  https://indianexpress.com/article/business/gft-authorises-17-banks-gold-silver-imports-2029-10642078/
+- India imposes immediate restrictions on gold, silver and platinum jewellery imports, NDTV Profit, 1 April 2026
+  https://www.ndtvprofit.com/economy/india-imposes-immediate-restrictions-on-gold-silver-and-platinum-jewellery-imports-to-curb-fta-misuse-11298771
+- India's gold import crisis: Why banks halted shipments for a month, Money Control, 12 May 2026
+  https://www.moneycontrol.com/news/business/commodities/india-s-gold-import-crisis-why-banks-halted-shipments-for-a-month-and-what-it-took-to-start-again-13916491.html
