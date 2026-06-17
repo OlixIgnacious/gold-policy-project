@@ -1,0 +1,44 @@
+{
+  "current": "v2",
+  "versions": {
+    "v1": {
+      "file": "gold_policy_v1.csv",
+      "created": "2025 (initial build)",
+      "description": "IBJA PDF archive only. 810 rows with Gold_INR_PM. No BullionWorld gap-fill.",
+      "ibja_sources": {
+        "pdf": 810,
+        "bullionworld": 0
+      },
+      "stats": {
+        "n_total": 810,
+        "n_pre": 754,
+        "n_post": 20,
+        "mean_pre": 2405.7,
+        "mean_post": 10318.3,
+        "raw_shift": 7912.6
+      }
+    },
+    "v2": {
+      "file": "gold_policy_v2.csv",
+      "created": "2026-06-17",
+      "description": "IBJA PDF + BullionWorld gap-fill for 105 archive-gap dates. Cell 3e/3f in 00_data_pipeline.ipynb.",
+      "ibja_sources": {
+        "pdf": 810,
+        "bullionworld": 105
+      },
+      "stats": {
+        "n_total": 915,
+        "n_pre": 859,
+        "n_post": 20,
+        "mean_pre": 2396.9,
+        "mean_post": 10318.3,
+        "raw_shift": 7921.3
+      },
+      "change_from_v1": {
+        "rows_added": 105,
+        "premium_mean_shift_pre": -8.8,
+        "note": "\u03b2\u2081 sensitivity to be re-checked in 03_its_regression.ipynb"
+      }
+    }
+  }
+}

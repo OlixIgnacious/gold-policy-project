@@ -46,8 +46,8 @@ premium_t = α + β·t    (low-duty window only)
 The low-duty window shows the premium oscillating around zero with no clear directional trend in Figure 1. Expectation: β ≈ 0, p > 0.05. The April–May 2026 negative dip (bank IGST pause) may introduce a slight downward slope, which would actually make our ITS estimate conservative (understating the true jump).
 
 **Result:** ✓ COMPLETED (Cell 7, Jun 2026)  
-- Window: 2024-07-25 → 2026-05-12 (N=321 trading days)
-- Slope: **+0.78 INR/10g per trading day** (+₹196/year — economically negligible)
+- Window: 2024-07-25 → 2026-05-12 (**N=360 trading days** in v2; was 321 in v1 — BullionWorld gap-fill added 39 low-duty dates)
+- Slope: **+0.78 INR/10g per trading day** (+₹196/year — economically negligible) *(run on v1; v2 result expected unchanged given BW dates have near-zero premiums)*
 - p-value: **0.3469** (>> 0.05)
 - R²: 0.0028 (time trend explains 0.28% of variance)
 - ITS effect at Day 1: ₹8,004 (actual Day 1 premium − counterfactual)
@@ -84,8 +84,8 @@ Augmented Dickey-Fuller (ADF) test on domestic_premium:
 
 | Series | Window | ADF stat | p-value | Lags | Decision |
 |---|---|---|---|---|---|
-| domestic_premium | Full sample (N=767) | −1.073 | 0.726 | 6 | ⚠ Appears non-stationary |
-| domestic_premium | Low-duty only (N=319) | −9.388 | 0.000 | 1 | ✓ Strongly stationary |
+| domestic_premium | Full sample (N=767 v1; ~882 v2) | −1.073 | 0.726 | 6 | ⚠ Appears non-stationary (structural break artifact) |
+| domestic_premium | Low-duty only (N=319 v1; **360 v2**) | −9.388 | 0.000 | 1 | ✓ Strongly stationary |
 | Gold_USD | Levels (N=1103) | +0.296 | 0.977 | 9 | ⚠ I(1) — unit root |
 | Gold_USD | First difference (N=1056) | −8.548 | 0.000 | 10 | ✓ I(0) — confirms I(1) |
 | rupees_per_dollar | Levels (N=1151) | −0.069 | 0.952 | 3 | ⚠ I(1) — unit root |
@@ -103,8 +103,8 @@ The full-sample ADF failure is a structural break problem, NOT a true unit root.
 - Lags 18+ are regime artifacts, not true autocorrelation
 - Within low-duty window: AIC selected only 1 lag
 - n^(1/4) rule-of-thumb: 6
-- **Decision: NW lag = 6 for ITS main specification**
-- Sensitivity to NW lag (3, 6, 10, 20) tested in Notebook 05
+- **Decision: NW lag = 8 for ITS main specification (v2, T=845)** — was 7 at T=739 (v1), was 6 initially (incorrect formula)
+- Sensitivity to NW lag (3, 6, 8, 10, 20) tested in Notebook 05
 
 ---
 
@@ -126,7 +126,7 @@ Where:
 - `t` = time trend (trading days since start)
 - `δGold_USD_t` = day-over-day % change in Gold_USD
 - `δFX_t` = day-over-day % change in INR/USD
-- Standard errors: Newey-West HAC (lag = ?)
+- Standard errors: Newey-West HAC (lag = **8**, v2 dataset T=845; NW-94 rule ⌈0.75 × T^(1/3)⌉)
 
 **H₀:** β₁ = 0 (duty hike had no effect on domestic premium)  
 **H₁:** β₁ > 0 (duty hike raised domestic premium)
@@ -136,8 +136,8 @@ H₀: β₂ = 0 (no time trend after controlling for treatment)
 This tests whether there was any residual drift not explained by the policy.
 
 **Expected result:**  
-β₁ ≈ ₹10,000–12,000 (consistent with 83.7% pass-through × ₹12,325 ceiling).  
-p-value for β₁ expected to be < 0.001 given the size of the shock relative to the pre-period standard deviation.
+β₁ ≈ ₹10,000–12,000 (consistent with 83.5% pass-through × ~₹12,230 ceiling in v2).  
+p-value for β₁ expected to be < 0.001 given the size of the shock relative to the pre-period standard deviation. *(v2 event-study lower bound: ₹10,215 mean premium over 23 valid post-hike days; 83.6% average pass-through)*
 
 **Pass-through calculation:**  
 `pass_through = β₁ / mean(parity_post − parity_pre)` during post-hike window.
@@ -234,8 +234,8 @@ Verify that the estimated treatment effect is specific to May 13 2026 and not an
 
 | # | Test | Notebook | H₀ | p-value | Decision |
 |---|------|----------|----|---------|----------|
-| 01 | Pre-trend (OLS slope in low-duty) | 01_eda | β = 0 | 0.3469 | ✅ Fail to reject — no pre-trend, ITS assumption holds |
-| 02 | Stationarity ADF (domestic_premium) | 01_eda | Unit root | 0.000 (low-duty only) | ✅ Reject unit root within regime — I(0), OLS valid |
+| 01 | Pre-trend (OLS slope in low-duty) | 01_eda | β = 0 | 0.3469 | ✅ Fail to reject — no pre-trend, ITS assumption holds (N=360 in v2) |
+| 02 | Stationarity ADF (domestic_premium) | 01_eda | Unit root | 0.000 (low-duty only) | ✅ Reject unit root within regime — I(0), OLS valid; NW lag=8 (v2, T=845) |
 | 03 | ITS treatment effect (β₁) | 03_its | β₁ = 0 | TBD | TBD |
 | 04 | Local Projection β at h=0…30 | 03_its | βʰ = 0 | TBD | TBD |
 | 05 | ARDL cointegration bounds | 03_its | No cointegration | TBD | TBD |
