@@ -213,10 +213,13 @@ Test whether domestic gold price (Gold_INR_PM), international gold price (Gold_U
 
 **Expected result:** Cointegration is expected economically — gold is a globally traded commodity with arbitrage. The duty shock shifts the long-run equilibrium level by the duty differential.
 
-**Result:** *(fill in after running Notebook 03)*  
-- F-statistic: _____  
-- Upper bound (5%): _____  
-- Conclusion: _____
+**Result:** ✅ COMPLETED (03_causal.ipynb, June 2026)
+- Method: UECM.from_ardl() — bounds_test is a UECMResults method in statsmodels 0.14.6
+- Pre-hike sample: N=859 | AIC-selected lag order: AR=6, Gold_USD=4, FX=3
+- F-statistic: **3.292**
+- 95% critical bounds: I(0)=3.229, I(1)=4.322
+- F sits between bounds → **INCONCLUSIVE at 95%**
+- **Conclusion:** Cannot confirm or rule out cointegration. Most likely explanation: the pre-hike window spans two structurally different regimes (high-duty 2022–2024 with premium ~₹4,170; low-duty 2024–2026 with premium ~₹−61). Testing cointegration across that regime break dilutes the signal and confuses the test. The result does not invalidate the ITS model — stationarity within regimes was already confirmed by ADF (TEST 02, p=0.000 in low-duty window).
 
 ---
 
@@ -255,7 +258,7 @@ Verify that the estimated treatment effect is specific to May 13 2026 and not an
 | 02 | Stationarity ADF (domestic_premium) | 01_eda | Unit root | 0.000 (low-duty only) | ✅ Reject unit root within regime — I(0), OLS valid; NW lag=8 (v2, T=845) |
 | 03 | ITS treatment effect (β₁) | 03_causal | β₁ = 0 | 7.18e-64 | ✅ Rejected — β₁=₹10,107 (82.3% pass-through), R²=0.501, NW lag=8 |
 | 04 | Local Projection β at h=0…30 | 03_causal | βʰ = 0 | <0.001 all h | ✅ Rejected throughout h=0..19 — peaks at h=14 (90%), pulls back h=19 (73%) |
-| 05 | ARDL cointegration bounds | 03_its | No cointegration | TBD | TBD |
+| 05 | ARDL cointegration bounds | 03_causal | No cointegration | — | ⚠️ Inconclusive (F=3.29, between 95% bounds [3.23, 4.32]) — pre-hike window spans two regimes, diluting signal |
 | 06 | Fake-date placebo (3 dates) | 05_robustness | β₁ = 0 | TBD | TBD |
 
 ---
