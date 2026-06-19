@@ -142,12 +142,17 @@ p-value for β₁ expected to be < 0.001 given the size of the shock relative to
 **Pass-through calculation:**  
 `pass_through = β₁ / mean(parity_post − parity_pre)` during post-hike window.
 
-**Result:** *(fill in after running Notebook 03)*  
-- β₁: _____  
-- SE (HAC): _____  
-- p-value: _____  
-- Pass-through: _____  
-- Conclusion: _____
+**Result:** ✅ COMPLETED (03_causal.ipynb Cell 5, June 2026)
+- β₁: **₹10,107/10g**
+- SE (HAC): ₹599 (NW lag=8, T=845, clean sample N=845)
+- 95% CI: [₹8,933, ₹11,281]
+- p-value: **7.18e-64**
+- R²: 0.501 | F-statistic: 79.25 (p=4.60e-57)
+- Durbin-Watson: 0.223 (strong autocorrelation → validates NW-HAC choice)
+- Pass-through: **82.3%** of mean duty ceiling (₹12,283)
+- δFX not significant (p=0.14) — FX works through level, not daily changes
+- H₀ (β₁=0): **REJECTED** (p << 0.001)
+- **Conclusion:** Duty hike raised domestic gold premium by ₹10,107/10g on average, after controlling for global gold price moves, rupee moves, and pre-existing trend. 82.3% of the maximum duty-induced premium passed through to consumers; 17.7% was absorbed (smuggling, demand destruction, scrap supply).
 
 ---
 
@@ -173,12 +178,24 @@ premium_{t+h} = αʰ + βʰ·post_t + γʰ·t + δʰ·δGold_USD_t + ζʰ·δFX_
 - h=10–20: βʰ plateauing or overshooting as international gold price fell  
 - 95% confidence bands should exclude zero throughout
 
-**Result:** *(fill in after running Notebook 03)*  
-- β at h=0: _____  
-- β at h=5: _____  
-- β at h=10: _____  
-- β at h=20: _____  
-- Converging / Plateauing / Overshooting: _____
+**Result:** ✅ COMPLETED (03_causal.ipynb Cell 8, June 2026)
+
+| h | β_h (₹) | Pass-through | Note |
+|---|---|---|---|
+| 0 | 10,107 | 82.3% | Day 1 — immediate but incomplete |
+| 1 | 10,381 | 84.5% | Still building |
+| 4 | 10,482 | 85.3% | Week 1 end |
+| 9 | 10,596 | 86.3% | Week 2 |
+| 14 | 11,050 | 90.0% | **Peak** |
+| 19 | 8,973 | 73.1% | Pullback begins |
+| 22+ | — | — | Sample too small, unreliable |
+
+- CI excludes zero: **throughout h=0..19**
+- Shape: **immediate jump → gradual build → peak at Day 14 → partial reversion**
+- Peak at h=14 (90%) then pullback at h=19 (73%) — market finding new equilibrium; demand destruction and scrap supply absorbing part of premium in Week 4
+- LP confirms ITS β₁=₹10,107 is a reliable pooled average — it sits through the middle of the impulse response path
+- Chart: `charts/fig_lp_impulse_response.png`
+- H₀ (βʰ=0): **REJECTED at all horizons h=0..19**
 
 ---
 
@@ -236,8 +253,8 @@ Verify that the estimated treatment effect is specific to May 13 2026 and not an
 |---|------|----------|----|---------|----------|
 | 01 | Pre-trend (OLS slope in low-duty) | 01_eda | β = 0 | 0.3469 | ✅ Fail to reject — no pre-trend, ITS assumption holds (N=360 in v2) |
 | 02 | Stationarity ADF (domestic_premium) | 01_eda | Unit root | 0.000 (low-duty only) | ✅ Reject unit root within regime — I(0), OLS valid; NW lag=8 (v2, T=845) |
-| 03 | ITS treatment effect (β₁) | 03_its | β₁ = 0 | TBD | TBD |
-| 04 | Local Projection β at h=0…30 | 03_its | βʰ = 0 | TBD | TBD |
+| 03 | ITS treatment effect (β₁) | 03_causal | β₁ = 0 | 7.18e-64 | ✅ Rejected — β₁=₹10,107 (82.3% pass-through), R²=0.501, NW lag=8 |
+| 04 | Local Projection β at h=0…30 | 03_causal | βʰ = 0 | <0.001 all h | ✅ Rejected throughout h=0..19 — peaks at h=14 (90%), pulls back h=19 (73%) |
 | 05 | ARDL cointegration bounds | 03_its | No cointegration | TBD | TBD |
 | 06 | Fake-date placebo (3 dates) | 05_robustness | β₁ = 0 | TBD | TBD |
 
