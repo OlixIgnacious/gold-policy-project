@@ -1,7 +1,7 @@
 # India Gold Import Duty — Pass-Through Study
 
 **Type:** Working paper (SSRN/arXiv → journal)  
-**Status:** Phase 2 complete — EDA done, moving to causal analysis (Notebook 03)  
+**Status:** Phase 3 complete — EDA, causal analysis (ITS, Local Projection, ARDL cointegration), and robustness suite all done; now experimenting with ARIMA forecasting (Notebook 04)  
 **Data coverage:** Jan 3, 2022 → Jun 16, 2026 (1,160 trading days × 29 columns)  
 **Dataset version:** v2 (IBJA PDF: 815 rows + BullionWorld gap-fill: 105 rows — see `data/VERSIONS.md`)
 
@@ -11,7 +11,7 @@
 
 > How much of India's May 13, 2026 gold import duty hike (6% → 15%) passed through to the domestic price premium, through what channels did it operate, and what structural forces — exchange rate stress, smuggling leakage, and pre-existing supply disruption — governed the degree of pass-through?
 
-**Headline finding (EDA):** Mean post-hike premium = ₹10,215/10g against a theoretical ceiling of ~₹12,230 → **83.6% pass-through (lower bound)**, N=23 valid post-hike days. Pass-through is non-monotonic: ramps from 73% → 78%, overshoots above 100% in Week 4 when international gold fell ~12%, then pulls back to ~81% as Gold_USD partially recovers in mid-June.
+**Headline finding (causal, primary spec):** The duty hike raised the domestic gold premium by **₹9,743/10g** (Newey-West HAC SE ₹589, p=1.96e-61, N=368) — **79.4% pass-through** [95% CI: 69.9%, 88.8%]. Partial pass-through (vs. 100%) is statistically confirmed (t=−4.30). Local projection shows the jump was immediate (Day 1) and held on a flat plateau for ~14 days, not a gradual build-up. The ARDL bounds test confirms domestic and international gold prices were cointegrated pre-hike (F=9.005), meaning the hike shifted the long-run equilibrium rather than producing a temporary spike. A fake-date placebo test (3 dates) found no spurious effect, confirming the result is specific to May 13, 2026.
 
 ---
 
@@ -51,6 +51,18 @@ Slope in low-duty window: +₹0.78/day, p=0.35 (N=360, v2) — no pre-existing t
 ### Stationarity (TEST 02)
 `domestic_premium` is I(0) within regimes (ADF p=0.000 in low-duty window). Full-sample non-stationarity is a structural break artifact, not a true unit root. `Gold_USD` and `rupees_per_dollar` are I(1) → ARDL bounds test valid for Notebook 03. Newey-West HAC lag = 8 (v2, T=845 regression sample).
 
+### ITS treatment effect (TEST 03)
+Primary spec (Jul 2024+ low-duty window, N=368): β₁ = **₹9,743/10g** (HAC SE ₹589, p=1.96e-61) → **79.4% pass-through** [CI: 69.9%, 88.8%]. Full-window robustness spec: ₹10,107/10g (82.3% PT). H₀ of 100% pass-through is rejected (t=−4.30) — 20.6% is absorbed by smuggling leakage, demand destruction, and scrap supply.
+
+### Local projection impulse response (TEST 04)
+Pass-through is immediate, not gradual: β_h jumps to ₹9,743 (79.4%) on Day 1 (h=0), peaks at ₹9,995 (81.4%) on Day 2, then holds a flat plateau through h=14 (78.2%). 95% CI excludes zero throughout h=0–19. Apparent late-horizon decline (h≥19) is a sample-thinning artifact, not economic reversion.
+
+### ARDL cointegration (TEST 05)
+Domestic gold price, international gold price, and the exchange rate are cointegrated pre-hike (ARDL(4,3), F=9.005 vs. 95% upper bound 4.812, N=859). The duty hike therefore shifted the long-run equilibrium permanently rather than causing a temporary deviation that would mean-revert.
+
+### Robustness (TEST 06, Notebook 05)
+Fake-date placebo (3 pre-hike dates) found no significant effect (p > 0.10 all dates) vs. the real May 13 estimate (p < 0.001) — a 4–11× larger outlier. β₁ is stable across NW lag choices (3/6/8/10/20) and window starts (Jan 2022/Jan 2024/Jul 2024), with no evidence of anticipation effects or confounding from the Apr 2 import restriction.
+
 ---
 
 ## Project Structure
@@ -77,8 +89,9 @@ gold-policy-project/
 ├── notebooks/
 │   ├── 00_data_pipeline.ipynb         ← ✅ DONE — fetch, merge, construct premium, save CSV
 │   ├── 01_eda.ipynb                   ← ✅ DONE — distributions, event window, correlations, outliers
-│   ├── 03_causal.ipynb                ← 🔜 NEXT — ITS + local projection + ARDL
-│   └── 05_robustness.ipynb            ← Placebo, sensitivity, window tests
+│   ├── 03_causal.ipynb                ← ✅ DONE — ITS + local projection + ARDL bounds test
+│   ├── 04_experiments/                ← 🔬 IN PROGRESS — exploratory ARIMA forecasting
+│   └── 05_robustness.ipynb            ← ✅ DONE — placebo, NW lag/window sensitivity, anticipation test
 ├── figures/                           ← PNG charts from EDA
 ├── paper/                             ← LaTeX draft (empty)
 ├── OUTLINE.md                         ← Full methodology and paper outline
@@ -117,19 +130,21 @@ domestic_premium = Gold_INR_PM − parity_pre                # Primary outcome
 
 ## Empirical Strategy
 
-**Model A — ITS (point estimate)**
+**Model A — ITS (point estimate)** ✅
 ```
 premium_t = α + β₁·post_t + β₂·t + β₃·ΔGold_USD_t + β₄·ΔFXR_t + ε_t
 ```
-Newey-West HAC SE (lag=8, v2). β₁ is the headline result.
+Newey-West HAC SE (lag=6, primary spec). β₁ = ₹9,743/10g (79.4% pass-through) is the headline result.
 
-**Model B — Local Projection (Jordà 2005) — time path**  
-Separate OLS at each horizon h=1…30. Captures whether pass-through was immediate, gradual, or overshooting.
+**Model B — Local Projection (Jordà 2005) — time path** ✅  
+Separate OLS at each horizon h=0…30. Confirms pass-through was immediate (Day 1) and plateaued, not gradual or overshooting.
 
-**Model C — ARDL Bounds Test (Pesaran 2001) — permanent vs temporary**  
-Tests cointegration between domestic gold price, international gold, and exchange rate. Mixed I(0)/I(1) system — ARDL is the appropriate method.
+**Model C — ARDL Bounds Test (Pesaran 2001) — permanent vs temporary** ✅  
+Tests cointegration between domestic gold price, international gold, and exchange rate. Mixed I(0)/I(1) system. F=9.005 confirms cointegration — the shift is permanent.
 
-**Robustness (Notebook 05):** Fake-date placebo (3 dates), NaN sensitivity, window sensitivity, HAC lag sensitivity, Apr 2 restriction control, anticipation test.
+**Robustness (Notebook 05)** ✅: Fake-date placebo (3 dates), window sensitivity, HAC lag sensitivity, Apr 2 restriction control, anticipation test — all confirm the primary estimate is stable and not spurious.
+
+**Experiments (Notebook 04, in progress):** Exploratory ARIMA/SARIMAX forecasting of `domestic_premium` with exogenous regressors (ΔGold_USD, ΔFX), order-selected via `pmdarima.auto_arima`.
 
 ---
 
@@ -139,7 +154,7 @@ Tests cointegration between domestic gold price, international gold, and exchang
 uv sync          # install dependencies from pyproject.toml
 ```
 
-Run notebooks in order: `00_data_pipeline.ipynb` → `01_eda.ipynb` → `03_causal.ipynb` → `05_robustness.ipynb`
+Run notebooks in order: `00_data_pipeline.ipynb` → `01_eda.ipynb` → `03_causal.ipynb` → `05_robustness.ipynb` → `04_experiments/` (exploratory, ARIMA forecasting)
 
 > **Note:** `data/ibja_pdfs/` (814 PDFs, 862MB) is gitignored. Run Notebook 00, Cell 3c to re-download if needed. The parsed `ibja_raw.csv` and `gold_policy_clean.csv` are committed and sufficient to reproduce all analysis without the PDFs.
 
