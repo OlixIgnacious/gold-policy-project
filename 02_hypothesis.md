@@ -295,6 +295,7 @@ Verify that the estimated treatment effect is specific to May 13 2026 and not an
 | 06c | Window sensitivity (3 start dates) | 05_robustness | β₁ stable | — | ✅ β₁ range ₹9,743–₹11,625; all significant; primary spec most conservative |
 | 06d | Anticipation test (drop 5 pre-hike days) | 05_robustness | No anticipation | — | ✅ β₁ changes −₹48 (0.5%) — no pre-announcement pricing |
 | 06e | pre_restriction control | 05_robustness | Apr 2 not a confounder | p=0.620 | ✅ β₁ changes −₹82 (0.8%); pre_restriction p=0.620 — not a confounder |
+| 07 | ARIMAX counterfactual cross-check | 04_experiments/arima | ARIMAX gap ≈ ITS β₁ | — | ✅ CONVERGED — ARIMAX(1,0,1) gap=₹10,187 vs ITS β₁=₹9,743 (4.6% diff); all 22 post-hike gaps >0; PT=83.0% vs 79.4%; chart: fig_arima_counterfactual.png |
 
 ---
 
