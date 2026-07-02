@@ -125,7 +125,7 @@ Where:
 - `t` = time trend (trading days since start)
 - `δGold_USD_t` = day-over-day % change in Gold_USD
 - `δFX_t` = day-over-day % change in INR/USD
-- Standard errors: Newey-West HAC (lag = **8**, v2 dataset T=845; NW-94 rule ⌈0.75 × T^(1/3)⌉)
+- Standard errors: Newey-West HAC (lag = **6**, primary sample T=368; NW-94 rule ⌈0.75 × T^(1/3)⌉; lag=8 for full-window robustness at T=845)
 
 **H₀:** β₁ = 0 (duty hike had no effect on domestic premium)  
 **H₁:** β₁ > 0 (duty hike raised domestic premium)
