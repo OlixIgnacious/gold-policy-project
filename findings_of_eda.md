@@ -118,7 +118,7 @@
 
 ## Cell 5 — Post-hike Event Study Table
 
-**Full 23-day post-hike trajectory:**
+**Full post-hike event study (36 calendar trading days, 31 valid):**
 
 | Date | Day | IBJA PM | Parity 6% | Ceiling | Premium | Pass-through |
 |------|-----|---------|-----------|---------|---------|--------------|
@@ -345,14 +345,14 @@ Gold_USD ~ I(1), rupees_per_dollar ~ I(1), domestic_premium ~ I(0) within regime
 
 ## Cell 12 — Feature Engineering
 
-**Purpose:** Add three columns needed for the ITS regression in Notebook 03. Saved back to `gold_policy_clean.csv` (1158 × 28 columns).
+**Purpose:** Add three columns needed for the ITS regression in Notebook 03. Saved back to `gold_policy_clean.csv` (1171 × 29 columns).
 
 ### Features added
 
 **`t` — integer time trend**
-- Range: 0 (Jan 3 2022) → 1157 (Jun 12 2026), one increment per calendar row
+- Range: 0 (Jan 3 2022) → 1170 (Jul 1 2026), one increment per calendar row
 - Used as `β₂·t` in the ITS specification to control for any secular drift in the premium
-- N=1158, fully populated (no NaN)
+- N=1171, fully populated (no NaN)
 
 **`pre_restriction` — documented confound dummy**
 - 1 if date is Apr 1 – May 12 2026 (30 trading days), else 0
@@ -471,7 +471,7 @@ Seasonal gap (peak vs inauspicious): approximately +₹224–₹367. Present but
 
 ### Paper implication
 
-The 83.6% pass-through shortfall in the first 25 post-hike trading days (May–June 2026, inauspicious season) **cannot be attributed primarily to seasonal effects.** The `pre_restriction` dummy (Apr 1 – May 12) controls for the documented confound window. The residual shortfall is better explained by $5.6bn April inventory overhang and smuggling elasticity. The seasonality analysis provides negative evidence: no seasonal confounder requires additional modelling in the ITS specification. *(Note: the "83.6% pass-through shortfall" reference in this section updates to 87.2% in v3 with 31 valid post-hike days.)*
+The 87.2% pass-through over 31 valid post-hike trading days (May–Jun 2026, inauspicious season) **cannot be attributed primarily to seasonal effects.** The `pre_restriction` dummy (Apr 1 – May 12) controls for the documented confound window. The residual shortfall (~12.8%) is better explained by $5.6bn April inventory overhang and smuggling elasticity. The seasonality analysis provides negative evidence: no seasonal confounder requires additional modelling in the ITS specification.
 
 ---
 
@@ -537,7 +537,7 @@ An external econometric audit raised ten claims. Full point-by-point response be
 
 **delta_Oil OVB** — *Wrong.* Tested directly in v1: including delta_Oil in the ITS regression changes β₁ from ₹10,520 to ₹10,530, a difference of ₹10 (0.10%). r(delta_Oil, premium) = 0.068 in the low-duty window. The audit's causal diagram (oil → forex → tariff) operates at the policy-decision level, not the daily-premium level. The `post_hike` dummy absorbs all policy-date effects regardless of what drove the policy decision. *(v3 primary β₁=₹10,124 from 03_causal; oil sensitivity confirmed negligible)*
 
-**Data leakage from feature engineering** — *Wrong.* `t` is a deterministic integer index (0, 1, 2 … 1157) — it encodes no outcome information. `lag1_premium` is Y_{t−1} — strictly backward-looking. Neither variable constitutes leakage. Leakage requires future outcome values to contaminate past estimates; that is not the case here.
+**Data leakage from feature engineering** — *Wrong.* `t` is a deterministic integer index (0, 1, 2 … 1170) — it encodes no outcome information. `lag1_premium` is Y_{t−1} — strictly backward-looking. Neither variable constitutes leakage. Leakage requires future outcome values to contaminate past estimates; that is not the case here.
 
 **Outlier over-cleaning** — *Factually incorrect.* Cell 10's pre-registered decision explicitly keeps all 16 outliers in the main specification. The audit criticises a decision the study did not make.
 
@@ -740,7 +740,7 @@ These look interesting but are entirely a regime artifact. The high-duty period 
 
 ### Finding 3: Post-hike — strong negative level correlation with gold price
 
-In the post-hike window (N=23 days), the premium shows strong negative correlations with gold price variables:
+In the post-hike window (N=31 days), the premium shows strong negative correlations with gold price variables:
 
 | Variable | Post-hike r |
 |---|---|
@@ -839,7 +839,7 @@ All three reject normality (Shapiro-Wilk p < 0.0001 expected; N > 1000 + fat tai
 
 Histogram: symmetric, range approximately −5% to +5%, slightly more peaked at centre than normal (leptokurtic). Q-Q plot deviates only in the extreme tails. The **19 extreme days (|delta_Gold_USD| > 3%)** are the tail observations identified in the table below.
 
-**Acceptable for OLS:** the fat tails are manageable at N=1158. These extreme days are the same observations already documented in Cell 10 (Trump tariff shock, gold bull market surge) — no new unknowns.
+**Acceptable for OLS:** the fat tails are manageable at N=1171. These extreme days are the same observations already documented in Cell 10 (Trump tariff shock, gold bull market surge) — no new unknowns.
 
 ---
 
@@ -893,7 +893,7 @@ Histogram: widest distribution of the three, range approximately −15% to +10%.
 
 ### Implication for ITS — non-normality in controls is not a problem
 
-OLS does not require normal regressors — only normal residuals (and with N=1158 the CLT handles non-normality in any case). The fat tails in delta_Gold_USD mean a handful of observations are high-leverage in the regression. Newey-West HAC standard errors (lag=6) already correct for the heteroskedasticity in residuals that correlates with these extreme control observations.
+OLS does not require normal regressors — only normal residuals (and with N=1171 the CLT handles non-normality in any case). The fat tails in delta_Gold_USD mean a handful of observations are high-leverage in the regression. Newey-West HAC standard errors (lag=6) already correct for the heteroskedasticity in residuals that correlates with these extreme control observations.
 
 **No adjustment to the main ITS specification is needed.** The distribution analysis confirms:
 1. delta_Gold_USD: include as primary control ✓ (r=−0.56 in low-duty, Q-Q r=0.9898, 19 extreme days all documented)
@@ -1082,7 +1082,7 @@ H₀: Mean Gold_USD on missing days = mean Gold_USD on observed days.
 | 2026-03 | 22 | 17 | 5 | 22.7% | Partial (Holi + holidays) |
 | 2026-04 | 22 | 18 | 4 | 18.2% | Partial (Ambedkar Jayanti + holidays) |
 
-**Pattern:** Three complete archive gaps (Aug–Oct 2024, Oct 2025) account for 66 of 149 missing rows (44%). The remaining 83 are Indian public holidays distributed across all months at 4–30% rates. Normal holiday months run 4–15%; months with major multi-day holidays (Holi, Eid, Diwali clusters, Independence Day) reach 25–30%.
+**Pattern:** Four near-complete archive gaps (Aug–Oct 2024, Oct 2025) account for 88 of 129 missing rows (68%). The remaining 41 are Indian public holidays distributed across all months at 4–30% rates. Normal holiday months run 4–15%; months with major multi-day holidays (Holi, Eid, Diwali clusters, Independence Day) reach 25–30%.
 
 **Conclusion:** The missing data in the low-duty window is MCAR conditional on calendar period. The ITS regression's `dropna()` on the premium column does not introduce systematic selection bias. The missing rows are Indian trading holidays and the Aug–Oct 2024 / Oct 2025 IBJA archive gaps — both documented and unrelated to the premium level or any control variable at the time.
 

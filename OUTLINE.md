@@ -28,7 +28,7 @@
 2. Demand compression — reduce gold consumption to narrow the trade deficit and stabilise the rupee
 
 **The partial pass-through puzzle:**
-Theoretical full pass-through at 9pp duty increase = ₹12,278/10g (mean ceiling across 22 post-hike days). ITS regression estimate: ₹9,743 (79.4% pass-through). The 20.6% absorption gap is explained by three mechanisms: smuggling leakage (estimated >100t in 2026, historical duty-smuggling correlation = +0.52), demand destruction (price elasticity −0.69 to −1.01), and front-loaded inventory at prior duty rate. This puzzle is the core contribution of the paper.
+Theoretical full pass-through at 9pp duty increase = ₹12,039/10g (mean ceiling across 29 ITS-eligible post-hike days). ITS regression estimate: ₹10,124 (84.1% pass-through). The 15.9% absorption gap is explained by three mechanisms: smuggling leakage (estimated >100t in 2026, historical duty-smuggling correlation = +0.52), demand destruction (price elasticity −0.69 to −1.01), and front-loaded inventory at prior duty rate. This puzzle is the core contribution of the paper.
 
 ---
 

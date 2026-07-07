@@ -1,77 +1,92 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{14}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem[Baig and Ahmad, 2016]{GoldElasticity2016}
-Baig, M.~A. and Ahmad, M.~I. (2016).
-\newblock An estimation of gold import demand function in {India}.
-\newblock {\em International Journal of Applied Business and Economic
-  Research}, 14(12):8707--8718.
+\bibitem[{World Gold Council}(2026{\natexlab{a}})]{WGC2026May}
+{World Gold Council}.
+\newblock India gold market update: Import tightening.
+\newblock Technical report, World Gold Council, May 2026{\natexlab{a}}.
 
-\bibitem[Campa and Goldberg, 2002]{Campa2002}
-Campa, J.~M. and Goldberg, L.~S. (2002).
+\bibitem[{World Gold Council}(2024{\natexlab{a}})]{WGC2024Jul}
+{World Gold Council}.
+\newblock India gold market update: Import duties reduced to decade low.
+\newblock Technical report, World Gold Council, July 2024{\natexlab{a}}.
+
+\bibitem[{Maria Immanuvel Susai} and {Lazar Daniel}(2024)]{GoldSmuggling2024}
+{Maria Immanuvel Susai} and {Lazar Daniel}.
+\newblock Gold smuggling in {India} and its effect on the bullion industry.
+\newblock \emph{Journal of Risk and Financial Management}, 17\penalty0
+  (3):\penalty0 122, 2024.
+\newblock \doi{10.3390/jrfm17030122}.
+
+\bibitem[Jord\`{a}(2005)]{Jorda2005}
+\`{O}scar Jord\`{a}.
+\newblock Estimation and inference of impulse responses by local projections.
+\newblock \emph{American Economic Review}, 95\penalty0 (1):\penalty0 161--182,
+  2005.
+
+\bibitem[Pesaran et~al.(2001)Pesaran, Shin, and Smith]{Pesaran2001}
+M.~Hashem Pesaran, Yongcheol Shin, and Richard~J. Smith.
+\newblock Bounds testing approaches to the analysis of level relationships.
+\newblock \emph{Journal of Applied Econometrics}, 16\penalty0 (3):\penalty0
+  289--326, 2001.
+
+\bibitem[Menon(1995)]{Menon1995}
+Jayant Menon.
+\newblock Exchange rate pass-through.
+\newblock \emph{Journal of Economic Surveys}, 9\penalty0 (2):\penalty0
+  197--231, 1995.
+
+\bibitem[Campa and Goldberg(2005)]{Campa2002}
+Jose~Manuel Campa and Linda~S. Goldberg.
 \newblock Exchange rate pass-through into import prices: A macro or micro
   phenomenon?
-\newblock {\em NBER Working Paper}, 8934.
+\newblock \emph{Review of Economics and Statistics}, 87\penalty0 (4):\penalty0
+  679--690, 2005.
 
-\bibitem[Fajgelbaum et~al., 2020]{Fajgelbaum2019}
-Fajgelbaum, P.~D., Goldberg, P.~K., Kennedy, P.~J., and Khandelwal, A.~K.
-  (2020).
+\bibitem[Fajgelbaum et~al.(2020)Fajgelbaum, Goldberg, Kennedy, and
+  Khandelwal]{Fajgelbaum2020}
+Pablo~D. Fajgelbaum, Pinelopi~K. Goldberg, Patrick~J. Kennedy, and Amit~K.
+  Khandelwal.
 \newblock The return to protectionism.
-\newblock {\em Quarterly Journal of Economics}, 135(1):1--55.
+\newblock \emph{Quarterly Journal of Economics}, 135\penalty0 (1):\penalty0
+  1--55, 2020.
 
-\bibitem[Gopinath et~al., 2010]{Gopinath2020}
-Gopinath, G., Itskhoki, O., and Rigobon, R. (2010).
+\bibitem[Gopinath et~al.(2010)Gopinath, Itskhoki, and Rigobon]{Gopinath2010}
+Gita Gopinath, Oleg Itskhoki, and Roberto Rigobon.
 \newblock Currency choice and exchange rate pass-through.
-\newblock {\em American Economic Review}, 100(1):304--336.
+\newblock \emph{American Economic Review}, 100\penalty0 (1):\penalty0 304--336,
+  2010.
 
-\bibitem[Jord\`{a}, 2005]{Jorda2005}
-Jord\`{a}, O. (2005).
-\newblock Estimation and inference of impulse responses by local projections.
-\newblock {\em American Economic Review}, 95(1):161--182.
+\bibitem[Baig and Ahmad(2016)]{GoldElasticity2016}
+Mirza~Allim Baig and Mohd~Izhar Ahmad.
+\newblock An estimation of gold import demand function in {India}.
+\newblock \emph{International Journal of Applied Business and Economic
+  Research}, 14\penalty0 (12):\penalty0 8707--8718, 2016.
 
-\bibitem[Menon, 1995]{Menon1995}
-Menon, J. (1995).
-\newblock Exchange rate pass-through.
-\newblock {\em Journal of Economic Surveys}, 9(2):197--231.
-
-\bibitem[Nakamura and Steinsson, 2018]{Nakamura2018}
-Nakamura, E. and Steinsson, J. (2018).
+\bibitem[Nakamura and Steinsson(2018)]{Nakamura2018}
+Emi Nakamura and Jon Steinsson.
 \newblock Identification in macroeconomics.
-\newblock {\em Journal of Economic Perspectives}, 32(3):59--86.
+\newblock \emph{Journal of Economic Perspectives}, 32\penalty0 (3):\penalty0
+  59--86, 2018.
 
-\bibitem[Newey and West, 1987]{Newey1987}
-Newey, W.~K. and West, K.~D. (1987).
+\bibitem[Newey and West(1987)]{Newey1987}
+Whitney~K. Newey and Kenneth~D. West.
 \newblock A simple, positive semi-definite, heteroskedasticity and
   autocorrelation consistent covariance matrix.
-\newblock {\em Econometrica}, 55(3):703--708.
+\newblock \emph{Econometrica}, 55\penalty0 (3):\penalty0 703--708, 1987.
 
-\bibitem[Pesaran et~al., 2001]{Pesaran2001}
-Pesaran, M.~H., Shin, Y., and Smith, R.~J. (2001).
-\newblock Bounds testing approaches to the analysis of level relationships.
-\newblock {\em Journal of Applied Econometrics}, 16(3):289--326.
-
-\bibitem[Veeramani and Dhir, 2024]{GoldSmuggling2024}
-Veeramani, C. and Dhir, G. (2024).
-\newblock Gold smuggling in {India}: Duty structure and bullion market effects.
-\newblock {\em Journal of Risk and Financial Management}, 17(3):122.
-
-\bibitem[{World Gold Council}, gust]{WGC2024Aug}
-{World Gold Council} (2024, August).
+\bibitem[{World Gold Council}(2024{\natexlab{b}})]{WGC2024Aug}
+{World Gold Council}.
 \newblock India gold market update: Import duty reduction, catalyst for demand.
-\newblock Technical report, World Gold Council.
+\newblock Technical report, World Gold Council, August 2024{\natexlab{b}}.
 
-\bibitem[{World Gold Council}, July]{WGC2024Jul}
-{World Gold Council} (2024, July).
-\newblock India gold market update: Import duties reduced to decade low.
-\newblock Technical report, World Gold Council.
-
-\bibitem[{World Gold Council}, pril]{WGC2026Apr}
-{World Gold Council} (2026, April).
+\bibitem[{World Gold Council}(2026{\natexlab{b}})]{WGC2026Apr}
+{World Gold Council}.
 \newblock India gold market update: Mixed reading.
-\newblock Technical report, World Gold Council.
-
-\bibitem[{World Gold Council},  May]{WGC2026May}
-{World Gold Council} (2026, May).
-\newblock India gold market update: Import tightening.
-\newblock Technical report, World Gold Council.
+\newblock Technical report, World Gold Council, April 2026{\natexlab{b}}.
 
 \end{thebibliography}

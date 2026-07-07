@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2026.6.9)  1 JUL 2026 13:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2026.6.9)  7 JUL 2026 17:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -687,11 +687,11 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 65.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 61.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 65.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 61.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 65.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 61.
  [2] [3] [4] [5]
 Underfull \hbox (badness 10000) in paragraph at lines 131--131
 [][]\T1/ptm/m/n/10 (+20) See [][]$\T1/cmtt/m/n/10 https : / / github . com / Ol
@@ -699,8 +699,13 @@ ixIgnacious / gold-[]policy-[]project$[][]\T1/ptm/m/n/10 (+20) . The dataset is
  ver-sioned:
  []
 
+
+Package multicol Warning: I moved some lines to the next page.
+(multicol)                Footnotes on page 6 might be wrong on input line 151.
+
+
 [6]
-<../figures//fig01_premium_timeseries.png, id=159, 1004.0712pt x 355.0866pt>
+<../figures//fig01_premium_timeseries.png, id=132, 1004.0712pt x 355.0866pt>
 File: ../figures//fig01_premium_timeseries.png Graphic file (type png)
 <use ../figures//fig01_premium_timeseries.png>
 Package pdftex.def Info: ../figures//fig01_premium_timeseries.png  used on inpu
@@ -714,73 +719,67 @@ See the caption package documentation for explanation.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 171.
+(caption)                particular \caption on input line 173.
 See the caption package documentation for explanation.
-
-
-Overfull \vbox (39.54204pt too high) has occurred while \output is active []
-
-
-Overfull \vbox (39.54204pt too high) has occurred while \output is active []
-
 
 [7 <../figures//fig01_premium_timeseries.png>] [8]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 244.
+(caption)                particular \caption on input line 249.
 See the caption package documentation for explanation.
 
-[9]
-<../charts//fig_lp_impulse_response.png, id=201, 714.0276pt x 351.714pt>
+[9] [10]
+<../charts//fig_lp_impulse_response.png, id=181, 714.0276pt x 351.714pt>
 File: ../charts//fig_lp_impulse_response.png Graphic file (type png)
 <use ../charts//fig_lp_impulse_response.png>
 Package pdftex.def Info: ../charts//fig_lp_impulse_response.png  used on input 
-line 300.
+line 306.
 (pdftex.def)             Requested size: 432.17375pt x 212.88155pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 301.
+(caption)                particular \caption on input line 307.
 See the caption package documentation for explanation.
 
-[10 <../charts//fig_lp_impulse_response.png>]
-<../figures//fig15_placebo_test.png, id=215, 1076.3412pt x 427.3566pt>
+[11 <../charts//fig_lp_impulse_response.png>]
+<../figures//fig15_placebo_test.png, id=192, 1076.3412pt x 427.3566pt>
 File: ../figures//fig15_placebo_test.png Graphic file (type png)
 <use ../figures//fig15_placebo_test.png>
 Package pdftex.def Info: ../figures//fig15_placebo_test.png  used on input line
- 324.
+ 330.
 (pdftex.def)             Requested size: 432.17375pt x 171.59169pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 325.
+(caption)                particular \caption on input line 331.
 See the caption package documentation for explanation.
 
-[11 <../figures//fig15_placebo_test.png>] [12]
-<../charts//fig_garch_volatility.png, id=239, 713.5458pt x 498.663pt>
+[12 <../figures//fig15_placebo_test.png>] [13]
+<../charts//fig_garch_volatility.png, id=213, 715.473pt x 498.663pt>
 File: ../charts//fig_garch_volatility.png Graphic file (type png)
 <use ../charts//fig_garch_volatility.png>
 Package pdftex.def Info: ../charts//fig_garch_volatility.png  used on input lin
-e 358.
-(pdftex.def)             Requested size: 432.17375pt x 302.03064pt.
+e 368.
+(pdftex.def)             Requested size: 432.17375pt x 301.20886pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 359.
+(caption)                particular \caption on input line 369.
 See the caption package documentation for explanation.
 
-[13 <../charts//fig_garch_volatility.png>] (./main.bbl [14]) [15] (./main.aux)
+[14 <../charts//fig_garch_volatility.png>] [15] (./main.bbl [16]) [17]
+(./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: C6C76046A1ECD3DA04D7F375D74B7CE6;921.
  ) 
 Here is how much of TeX's memory you used:
- 14955 strings out of 480247
- 237978 string characters out of 5896152
- 560975 words of memory out of 5000000
- 32187 multiletter control sequences out of 15000+600000
- 566726 words of font info for 391 fonts, out of 8000000 for 9000
+ 14965 strings out of 480247
+ 238054 string characters out of 5896152
+ 561778 words of memory out of 5000000
+ 32189 multiletter control sequences out of 15000+600000
+ 567077 words of font info for 395 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 60i,18n,63p,1427b,607s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,18n,63p,1484b,632s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exi
 st, replaced by a fixed one
 
@@ -797,10 +796,10 @@ rw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/
 texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (15 pages, 644274 bytes).
+Output written on main.pdf (17 pages, 647359 bytes).
 PDF statistics:
- 394 PDF objects out of 1000 (max. 8388607)
- 284 compressed objects within 3 object streams
- 79 named destinations out of 1000 (max. 500000)
+ 367 PDF objects out of 1000 (max. 8388607)
+ 258 compressed objects within 3 object streams
+ 82 named destinations out of 1000 (max. 500000)
  102493 words of extra memory for PDF output out of 106986 (max. 10000000)
 
