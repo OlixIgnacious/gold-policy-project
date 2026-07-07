@@ -75,7 +75,7 @@ gold-policy-project/
 │   ├── gold_policy_clean.csv          ← PRIMARY DATASET, v3 (1171 × 29)
 │   ├── gold_policy_v1.csv             ← Frozen v1 snapshot (IBJA PDF only, 810 rows)
 │   ├── gold_policy_v2.csv             ← Frozen v2 snapshot (+ BullionWorld gap-fill, 915 rows)
-│   ├── gold_policy_v3.csv             ← Frozen v3 snapshot (BW rejected, 824 PDF rows) — written on next pipeline run
+│   ├── gold_policy_v3.csv             ← Frozen v3 snapshot (BW rejected, 824 PDF rows)
 │   ├── VERSIONS.md                    ← v1 → v3 changelog and how to switch versions
 │   ├── versions.json                  ← Machine-readable version metadata
 │   ├── ibja_raw.csv                   ← IBJA-only panel (all fields)
