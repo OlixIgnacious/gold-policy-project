@@ -1,18 +1,19 @@
-\begin{thebibliography}{14}
+\begin{thebibliography}{17}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem[{World Gold Council}(2026{\natexlab{a}})]{WGC2026May}
+\bibitem[{World Gold Council}(2026{\natexlab{a}})]{WGCgdt2025}
 {World Gold Council}.
-\newblock India gold market update: Import tightening.
-\newblock Technical report, World Gold Council, May 2026{\natexlab{a}}.
+\newblock Gold demand trends: Full year and {Q4} 2025.
+\newblock Technical report, World Gold Council, February 2026{\natexlab{a}}.
 
 \bibitem[{World Gold Council}(2024{\natexlab{a}})]{WGC2024Jul}
 {World Gold Council}.
-\newblock India gold market update: Import duties reduced to decade low.
+\newblock Indian gold import duties reduced to the lowest level in over a
+  decade.
 \newblock Technical report, World Gold Council, July 2024{\natexlab{a}}.
 
 \bibitem[{Maria Immanuvel Susai} and {Lazar Daniel}(2024)]{GoldSmuggling2024}
@@ -61,17 +62,36 @@ Gita Gopinath, Oleg Itskhoki, and Roberto Rigobon.
 \newblock \emph{American Economic Review}, 100\penalty0 (1):\penalty0 304--336,
   2010.
 
-\bibitem[Baig and Ahmad(2016)]{GoldElasticity2016}
-Mirza~Allim Baig and Mohd~Izhar Ahmad.
-\newblock An estimation of gold import demand function in {India}.
-\newblock \emph{International Journal of Applied Business and Economic
-  Research}, 14\penalty0 (12):\penalty0 8707--8718, 2016.
+\bibitem[Amiti et~al.(2019)Amiti, Itskhoki, and Konings]{Amiti2019}
+Mary Amiti, Oleg Itskhoki, and Jozef Konings.
+\newblock International shocks, variable markups, and domestic prices.
+\newblock \emph{Review of Economic Studies}, 86\penalty0 (6):\penalty0
+  2356--2402, 2019.
+
+\bibitem[Kanjilal and Ghosh(2014)]{KanjilalGhosh2014}
+Kakali Kanjilal and Sajal Ghosh.
+\newblock Income and price elasticity of gold import demand in {India}:
+  Empirical evidence from threshold and {ARDL} bounds test cointegration.
+\newblock \emph{Resources Policy}, 41:\penalty0 135--142, 2014.
+\newblock \doi{10.1016/j.resourpol.2014.05.003}.
+
+\bibitem[{World Gold Council}(2026{\natexlab{b}})]{WGC2026May}
+{World Gold Council}.
+\newblock India gold market update: Import tightening.
+\newblock Technical report, World Gold Council, May 2026{\natexlab{b}}.
 
 \bibitem[Nakamura and Steinsson(2018)]{Nakamura2018}
 Emi Nakamura and Jon Steinsson.
 \newblock Identification in macroeconomics.
 \newblock \emph{Journal of Economic Perspectives}, 32\penalty0 (3):\penalty0
   59--86, 2018.
+
+\bibitem[Bernal et~al.(2017)Bernal, Cummins, and Gasparrini]{Bernal2017}
+James~Lopez Bernal, Steven Cummins, and Antonio Gasparrini.
+\newblock Interrupted time series regression for the evaluation of public
+  health interventions: a tutorial.
+\newblock \emph{International Journal of Epidemiology}, 46\penalty0
+  (1):\penalty0 348--355, 2017.
 
 \bibitem[Newey and West(1987)]{Newey1987}
 Whitney~K. Newey and Kenneth~D. West.
@@ -84,9 +104,9 @@ Whitney~K. Newey and Kenneth~D. West.
 \newblock India gold market update: Import duty reduction, catalyst for demand.
 \newblock Technical report, World Gold Council, August 2024{\natexlab{b}}.
 
-\bibitem[{World Gold Council}(2026{\natexlab{b}})]{WGC2026Apr}
+\bibitem[{World Gold Council}(2026{\natexlab{c}})]{WGC2026Apr}
 {World Gold Council}.
 \newblock India gold market update: Mixed reading.
-\newblock Technical report, World Gold Council, April 2026{\natexlab{b}}.
+\newblock Technical report, World Gold Council, April 2026{\natexlab{c}}.
 
 \end{thebibliography}
