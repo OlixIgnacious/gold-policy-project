@@ -9,15 +9,21 @@
 {World Gold Council}.
 \newblock Gold demand trends: Full year and {Q4} 2025.
 \newblock Technical report, World Gold Council, February 2026{\natexlab{a}}.
+\newblock URL
+  \url{https://www.gold.org/goldhub/research/gold-demand-trends/gold-demand-trends-full-year-2025}.
+\newblock Accessed: 2026-07-10.
 
 \bibitem[{World Gold Council}(2024{\natexlab{a}})]{WGC2024Jul}
 {World Gold Council}.
 \newblock Indian gold import duties reduced to the lowest level in over a
   decade.
 \newblock Technical report, World Gold Council, July 2024{\natexlab{a}}.
+\newblock URL
+  \url{https://www.gold.org/goldhub/gold-focus/2024/07/indian-gold-import-duties-reduced-lowest-level-over-decade}.
+\newblock Accessed: 2026-07-10.
 
-\bibitem[{Maria Immanuvel Susai} and {Lazar Daniel}(2024)]{GoldSmuggling2024}
-{Maria Immanuvel Susai} and {Lazar Daniel}.
+\bibitem[Maria~Immanuvel and Lazar(2024)]{GoldSmuggling2024}
+Susai Maria~Immanuvel and Daniel Lazar.
 \newblock Gold smuggling in {India} and its effect on the bullion industry.
 \newblock \emph{Journal of Risk and Financial Management}, 17\penalty0
   (3):\penalty0 122, 2024.
@@ -79,6 +85,9 @@ Kakali Kanjilal and Sajal Ghosh.
 {World Gold Council}.
 \newblock India gold market update: Import tightening.
 \newblock Technical report, World Gold Council, May 2026{\natexlab{b}}.
+\newblock URL
+  \url{https://www.gold.org/goldhub/gold-focus/2026/05/india-gold-market-update-import-tightening}.
+\newblock Accessed: 2026-07-10.
 
 \bibitem[Nakamura and Steinsson(2018)]{Nakamura2018}
 Emi Nakamura and Jon Steinsson.
@@ -103,10 +112,16 @@ Whitney~K. Newey and Kenneth~D. West.
 {World Gold Council}.
 \newblock India gold market update: Import duty reduction, catalyst for demand.
 \newblock Technical report, World Gold Council, August 2024{\natexlab{b}}.
+\newblock URL
+  \url{https://www.gold.org/goldhub/gold-focus/2024/08/indias-gold-market-update-import-duty-reduction-catalyst-demand}.
+\newblock Accessed: 2026-07-10.
 
 \bibitem[{World Gold Council}(2026{\natexlab{c}})]{WGC2026Apr}
 {World Gold Council}.
 \newblock India gold market update: Mixed reading.
 \newblock Technical report, World Gold Council, April 2026{\natexlab{c}}.
+\newblock URL
+  \url{https://www.gold.org/goldhub/gold-focus/2026/04/india-gold-market-update-mixed-reading}.
+\newblock Accessed: 2026-07-10.
 
 \end{thebibliography}
